@@ -50,7 +50,7 @@ public class PoohServer {
     }
 }
 
-// curl -X POST /queue/weather -d "temperature=18" http://localhost:9000/queue/weather
-// curl -X GET /queue/weather http://localhost:9000/queue/weather
-// curl -X POST /topic/weather -d "temperature=18" http://localhost:9000/queue/weather
-// curl -X GET /topic/weather/ http://localhost:9000/queue/weather/1
+// curl -X POST http://localhost:9000/queue/weather -d "temperature=18"
+// curl -X GET http://localhost:9000/queue/weather
+// curl -X POST http://localhost:9000/topic/weather -d "temperature=18"
+// curl -X GET http://localhost:9000/topic/weather/

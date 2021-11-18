@@ -9,7 +9,7 @@ public class TopicService implements Service {
     private static final AtomicInteger ID_QUEUE = new AtomicInteger(1);
     private final ConcurrentHashMap<String,
             ConcurrentHashMap<Integer,
-            ConcurrentLinkedQueue<String>>> queue = new ConcurrentHashMap<>();
+                    ConcurrentLinkedQueue<String>>> queue = new ConcurrentHashMap<>();
 
     @Override
     public Resp process(Req req) {
@@ -18,7 +18,8 @@ public class TopicService implements Service {
         if (req.method().equals(Resp.POST)) {
             queue.putIfAbsent(nameQueue, new ConcurrentHashMap<>());
             text = req.text();
-            queue.get(nameQueue).putIfAbsent(ID_QUEUE.getAndIncrement(), new ConcurrentLinkedQueue<>());
+            queue.get(nameQueue).putIfAbsent(
+                    ID_QUEUE.getAndIncrement(), new ConcurrentLinkedQueue<>());
             queue.get(nameQueue).get(ID_QUEUE.get()).add(text);
         } else {
             text = queue
