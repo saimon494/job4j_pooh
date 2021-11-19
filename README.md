@@ -1,6 +1,6 @@
 
-# Pooh JMS
-[![Build Status](https://travis-ci.com/saimon494/job4j_pooh.svg?branch=main)](https://travis-ci.com/saimon494/job4j_pooh)
+# Проект - Pooh JMS
+[![Build Status](https://travis-ci.com/saimon494/job4j_pooh.svg?branch=master)](https://travis-ci.com/saimon494/job4j_pooh)
 
 ## О проекте
 
